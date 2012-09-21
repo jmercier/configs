@@ -3,3 +3,5 @@
 .config/awesome/rc.lua
 .bashrc
 .profile
+.config/conky
+.gitconfig

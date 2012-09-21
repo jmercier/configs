@@ -1,0 +1,8 @@
+[user]
+	name = J-Pascal Mercier
+
+[alias]
+    st = status
+    co = checkout
+[core]
+	editor = gvim --nofork
