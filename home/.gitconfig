@@ -4,5 +4,14 @@
 [alias]
     st = status
     co = checkout
+	difft = difftool --gui
 [core]
 	editor = gvim --nofork
+	autocrlf = input
+[color]
+	ui = true
+[diff]
+	tool = vimdiff
+    guitool = gvimdiff
+[difftool]
+	prompt = false

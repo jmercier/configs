@@ -298,13 +298,15 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 root.buttons(awful.util.table.join(
     awful.button({ }, 3, function () mymainmenu:toggle() end)))
 -- }}}
---awful.util.spawn("xfce4-settings-helper")
---awful.util.spawn("/usr/lib/gnome-settings-daemon/gnome-settings-daemon")
---awful.util.spawn("gnome-power-manager")
 awful.util.spawn("gnome-do")
 awful.util.spawn("xcompmgr")
---awful.util.spawn("gnome-keyring-daemon --start --foreground --components=secrets")
-awful.util.spawn("conky")
+conky_dir = os.getenv("HOME") .. "/.config/conky/"
+awful.util.spawn("conky -c " .. conky_dir .. "conkyhr")
+awful.util.spawn("conky -c " .. conky_dir .. "conkymail")
+awful.util.spawn("conky -c " .. conky_dir .. "conkyram")
+awful.util.spawn("conky -c " .. conky_dir .. "conkycpu")
+awful.util.spawn("conky -c " .. conky_dir .. "conkydate")
+awful.util.spawn("conky -c " .. conky_dir .. "conkyweather")
 awful.util.spawn("wmname LG3D")
 
 

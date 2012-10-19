@@ -5,10 +5,12 @@ FILES=`cat ./files`
 for file in ${FILES}
 do
     DEST=./home/${file}
+    SRC=${HOME}/${file}
     DIR=`dirname ${DEST}`
     if [ ! -d ${DIR} ];
     then
         mkdir -p ${DIR}
     fi
-    cp -rf ${HOME}/${file} ./home/${file}
+    echo "Gathering : ${SRC} --> ${DEST}"
+    cp -rf ${SRC} ${DEST}
 done
