@@ -4,11 +4,13 @@ FILES=`cat ./files`
 
 for file in ${FILES}
 do
-    DEST=./home/${file}
-    DIR=`dirname ${DEST}`
+    DST=${HOME}/${file}
+    SRC=./home/${file}
+    DIR=`dirname ${DST}`
     if [ ! -d ${DIR} ];
     then
         mkdir -p ${DIR}
     fi
-    cp -rf ./home/${file} ${HOME}/${file}
+    echo "${SRC} --> ${DST}"
+    cp -rf ${SRC} ${DST}
 done
