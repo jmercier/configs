@@ -1,0 +1,13 @@
+#!/bin/sh
+
+FILES=`cat ./files`
+DIFFTOOL=colordiff
+
+for file in ${FILES}
+do
+    DEST=./home/${file}
+    SRC=${HOME}/${file}
+    DIR=`dirname ${DEST}`
+    echo "diffing : ${SRC} --> ${DEST}"
+    ${DIFFTOOL} ${SRC} ${DEST}
+done
