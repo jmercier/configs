@@ -1,6 +1,7 @@
 .vimrc
 .gvimrc
 .config/awesome/rc.lua
+.config/awesome/theme.lua
 .bashrc
 .profile
 .config/conky

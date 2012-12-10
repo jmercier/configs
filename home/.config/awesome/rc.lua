@@ -307,6 +307,7 @@ awful.util.spawn("conky -c " .. conky_dir .. "conkyram")
 awful.util.spawn("conky -c " .. conky_dir .. "conkycpu")
 awful.util.spawn("conky -c " .. conky_dir .. "conkydate")
 awful.util.spawn("conky -c " .. conky_dir .. "conkyweather")
+awful.util.spawn("gnome-screensaver")
 awful.util.spawn("wmname LG3D")
 
 
