@@ -82,6 +82,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias pacman='pacman-color'
+alias yaourtup='yaourt -Syua'
+alias pacmanup='pacman -Syua'
 
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -107,4 +109,3 @@ fi
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-5.0/lib64
 export PATH=$PATH:/usr/local/cuda-5.0/bin
 export EDITOR="gvim -e"
-export VIMEDIX_HOME="${HOME}/devel/vimedix"

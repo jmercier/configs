@@ -1,0 +1,31 @@
+#!/bin/sh
+read -p "Target [1]: " PLATFORM_TARGET
+PLATFORM_TARGET=${PLATFORM_TARGET:-1}
+
+read -p "Project Name [Meh]: " PROJECT_NAME
+PROJECT_NAME=${PROJECT_NAME:-Meh}
+
+read -p "Project Path [./]: " PROJECT_PATH
+PROJECT_PATH=${PROJECT_PATH:-"./"}
+
+read -p "Project Activity Name [MainActivity]: " ACTIVITY_NAME
+ACTIVITY_NAME=${ACTIVITY_NAME:-MainActivity}
+
+read -p "Project Package [com.example.${PROJECT_NAME}]: " PROJECT_PACKAGE
+PROJECT_PACKAGE=${PROJECT_PACKAGE:-com.example.${PROJECT_NAME}}
+
+CMD_LINE="android create project \
+            --target ${PLATFORM_TARGET} \
+            --name ${PROJECT_NAME} \
+            --path ${PROJECT_PATH} \
+            --activity ${ACTIVITY_NAME} \
+            --package ${PROJECT_PACKAGE}"
+
+echo ${CMD_LINE}
+#${CMD_LINE}
+echo \
+"PLATFORM_TARGET=${PLATFORM_TARGET}
+ACTIVITY_NAME=${ACTIVITY_NAME}
+PROJECT_PACKAGE=${PROJECT_PACKAGE}
+PROJECT_NAME=${PROJECT_NAME}" > .project_info
+

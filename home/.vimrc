@@ -6,6 +6,8 @@ filetype indent on
 set ruler
 set showcmd
 set incsearch
+set ignorecase
+set smartcase
 
 """"""""""""""""""""""""""""""""""""""""
 "Folding
@@ -41,7 +43,7 @@ set ts=4
 set softtabstop=4
 set shiftwidth=4
 set cindent
-"set tw=80
+"set textwidth=79
 set cino=(0,t0
 
 im :<CR> :<CR><TAB>
@@ -57,9 +59,10 @@ let g:tex_flavor="latex"
 let g:clang_complete_copen = 1
 let g:clang_library_path="/usr/lib/llvm"
 let g:clang_use_library = 1
-let g:clang_complete-hl_errors = 1
-let g:clang_complete-periodic_quickfix = 1
-let g:clang_snippets = "snipmate"
+let g:clang_complete_hl_errors = 1
+let g:clang_complete_periodic_quickfix = 1
+let g:clang_complete_auto = 0
+let g:clang_auto_select = 0
 
 
 au BufNewFile,BufRead *.cu set ft=cpp

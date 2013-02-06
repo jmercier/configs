@@ -6,3 +6,6 @@
 .profile
 .config/conky
 .gitconfig
+bin/android-debug
+bin/android-run
+bin/android-create

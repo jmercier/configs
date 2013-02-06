@@ -1,0 +1,5 @@
+#!/bin/sh
+source ./.project_info
+JDWP_PORT=`adb jdwp | tail -1`
+adb forward tcp:29882 jdwp:${JDWP_PORT}
+jdb -sourcepath ./ -attach localhost:29882

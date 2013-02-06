@@ -1,0 +1,5 @@
+#!/bin/sh
+source ./.project_info
+ant debug
+adb install -r ./bin/${PROJECT_NAME}-debug.apk
+adb -d shell "am start -e debug true -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n ${PROJECT_PACKAGE}/.${ACTIVITY_NAME}"

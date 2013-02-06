@@ -31,12 +31,12 @@ map <C-k> :bp!<CR>
 set switchbuf=usetab
 set guioptions-=T
 
+set gfn=Monospace\ 8
+"set gfn=Inconsolata\ 10
 "set gfn=Bitstream\ Vera\ Sans\ Mono\ 8
-"set gfn=Courier\ 10\ Pitch\ 9
-"set gfn=Inconsolata\ 9
-set gfn=Bitstream\ Vera\ Sans\ Mono\ 10
-"set gfn=Monospace\ 8
-"set gfn=DejaVu\ Sans\ Mono\ 10
+"set gfn=Droid\ Sans\ Mono\ 10
+"set gfn=Monospace\ 10
+"set gfn=DejaVu\ Sans\ Mono\ 8
 syntax on
 
 set guioptions-=m
