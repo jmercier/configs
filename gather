@@ -7,6 +7,10 @@ do
     DEST=./home/${file}
     SRC=${HOME}/${file}
     DIR=`dirname ${DEST}`
+    if [ -e ${DEST} ];
+    then
+        rm -rf ${DEST}
+    fi
     if [ ! -d ${DIR} ];
     then
         mkdir -p ${DIR}
