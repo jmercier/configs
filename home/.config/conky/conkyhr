@@ -1,6 +1,6 @@
 background no
 use_xft yes
-xftfont Comfortaa:bold:size=100
+xftfont Comfortaa:bold:size=80
 xftalpha 0.9
 update_interval 3.0
 total_run_times 0
@@ -10,7 +10,7 @@ own_window_transparent yes
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 double_buffer yes
 minimum_size  250
-maximum_width 250
+maximum_width 275
 draw_shades yes
 draw_outline no
 draw_borders no
@@ -27,4 +27,4 @@ cpu_avg_samples 2
 override_utf8_locale no
 
 TEXT
-${color FFFFFF}${time %H}|${font Comfortaa:bold:size=50}${color 666666}${time %M}${font}
+${color FFFFFF}${time %H}|${font Comfortaa:bold:size=40}${color 666666}${time %M}${font}

@@ -1,6 +1,6 @@
 background no
 use_xft yes
-xftfont Comfortaa:bold:size=25
+xftfont Comfortaa:bold:size=100
 xftalpha 0.9
 update_interval 3.0
 total_run_times 0
@@ -9,8 +9,8 @@ own_window_type override
 own_window_transparent yes
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 double_buffer yes
-minimum_size  400
-maximum_width 400
+minimum_size  250
+maximum_width 250
 draw_shades yes
 draw_outline no
 draw_borders no
@@ -19,13 +19,12 @@ default_color 808080
 default_shade_color 101319
 default_outline_color green
 alignment top_left
-gap_x 400
-gap_y 220
+gap_x 50
+gap_y 200
 no_buffers yes
 uppercase no
 cpu_avg_samples 2
 override_utf8_locale no
 
 TEXT
-${color ce2c51} ${time %d} ${color ffffff}${time %B}
- ${time %A}
+${color FFFFFF}${time %H}|${font Comfortaa:bold:size=50}${color 666666}${time %M}${font}

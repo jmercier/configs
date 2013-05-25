@@ -31,11 +31,8 @@ layouts =
 {
     awful.layout.suit.floating,
     awful.layout.suit.tile.right,
-    awful.layout.suit.tile.top,
-    awful.layout.suit.fair,
-    awful.layout.suit.fair.horizontal,
+    awful.layout.suit.tile.bottom,
     awful.layout.suit.max,
-    awful.layout.suit.max.fullscreen,
 }
 -- }}
 
@@ -126,7 +123,8 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
-
+    awful.key({ modkey, "Control"   }, "s", function () awful.util.spawn("gnome-session-suspend") end),
+    awful.key({ modkey, "Control" }, "l", function () awful.util.spawn("gnome-session-lock") end),
     awful.key({ modkey,           }, "j",
         function ()
             awful.client.focus.byidx( 1)
@@ -143,6 +141,9 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end),
     awful.key({ modkey, "Control" }, "j", function () awful.screen.focus_relative( 1) end),
     awful.key({ modkey, "Control" }, "k", function () awful.screen.focus_relative(-1) end),
+    awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer -c 0 set Master 1dB+") end),
+    awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("amixer -c 0 set Master 1dB-") end),
+    awful.key({ }, "XF86AudioMute", function () awful.util.spawn("amixer -c 0 set Master toggle") end),
     awful.key({ modkey,           }, "u", awful.client.urgent.jumpto),
     awful.key({ modkey,           }, "Tab",
         function ()
@@ -155,7 +156,8 @@ globalkeys = awful.util.table.join(
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
     awful.key({ modkey, "Control" }, "r", awesome.restart),
-    awful.key({ modkey, "Shift"   }, "q", awesome.quit),
+    --awful.key({ modkey, "Shift"   }, "q", awesome.quit),
+    awful.key({ modkey, "Shift"   }, "q", function () awful.util.spawn("gnome-session-quit") end),
 
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)    end),
     awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)    end),
@@ -317,6 +319,7 @@ awful.util.spawn("conky -c " .. conky_dir .. "conkyram")
 awful.util.spawn("conky -c " .. conky_dir .. "conkycpu")
 awful.util.spawn("conky -c " .. conky_dir .. "conkydate")
 awful.util.spawn("conky -c " .. conky_dir .. "conkyweather")
+awful.util.spawn("volumeicon")
 awful.util.spawn("gnome-screensaver")
 awful.util.spawn("wmname LG3D")
 

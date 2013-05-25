@@ -81,9 +81,9 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias pacman='pacman-color'
 alias yaourtup='yaourt -Syua'
-alias pacmanup='pacman -Syua'
+alias pacmanup='pacman -Syu'
+alias pacman='pacman --color always'
 
 
 # Add an "alert" alias for long running commands.  Use like so:

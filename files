@@ -6,6 +6,11 @@
 .profile
 .config/conky
 .gitconfig
+.env/android_ndk.env
+bin/vpnc-script
 bin/android-debug
 bin/android-run
 bin/android-create
+bin/gnome-session-lock
+bin/gnome-session-suspend
+bin/cmake-clang
