@@ -1,6 +1,6 @@
 background no
 use_xft yes
-xftfont Comfortaa:bold:size=30
+xftfont Comfortaa:bold:size=25
 xftalpha 0.9
 update_interval 3.0
 total_run_times 0
