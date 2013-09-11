@@ -57,7 +57,9 @@ let g:tex_flavor="latex"
 " Clang
 "
 let g:clang_complete_copen = 1
-let g:clang_library_path="/usr/lib/llvm"
+let g:clang_complete_auto = 1
+let g:clang_library_path = "/usr/lib/"
+let g:clang_periodic_quickfix = 1
 let g:clang_use_library = 1
 let g:clang_complete_hl_errors = 1
 let g:clang_complete_periodic_quickfix = 1
@@ -67,6 +69,7 @@ let g:clang_snippets = 1
 let g:clang_close_preview = 1
 let g:clang_complete_patterns = 1
 let g:clang_jumpto_declaration_key = '<C-[>'
+let g:clang_jumpto_back_key = '<C-O>'
 
 
 au BufNewFile,BufRead *.cu set ft=cpp
